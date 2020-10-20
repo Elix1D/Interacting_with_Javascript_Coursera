@@ -12,79 +12,37 @@
 	fieldset{
  	   margin-bottom: 4%;
 	}	
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   * {
-      box-sizing: border-box;
-   }
-   body {
-      margin: 10px;
-      padding: 0px;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-   }
-   .autocomplete {
-      position: relative;
-      display: inline-block;
-   }
-   input {
-      border: none;
-      background-color: #f1f1f1;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 4px;
-   }
-   input[type="text"] {
-      background-color: #e1f6fc;
-      width: 100%;
-   }
-   input[type="submit"] {
-      background-color: DodgerBlue;
-      color: #fff;
-      cursor: pointer;
-   }
-   .autocomplete-items {
-      position: absolute;
-      border-bottom: none;
-      border-top: none;
-      z-index: 99;
-      top: 100%;
-      left: 0;
-      right: 0;
-   }
-   .autocomplete-items div {
-      padding: 10px;
-      cursor: pointer;
-      border: 1px solid #8e26d4;
-      border-bottom: 1px solid #d4d4d4;
-   }
-   .autocomplete-items div:hover {
-      background-color: #e9e9e9;
-   }
-   .autocomplete-active {
-      background-color: rgb(30, 255, 169) !important;
-      color: #ffffff;
-   }
     </style>
   </head>
   <body>
-	<h1>JavaScript Homework</h1>	
+	<link rel="stylesheet" type="text/css" href="../css/billing.css">
+	<script type="text/javascript" src="../js/billing.js"></script>
+
+	  <h1>JavaScript Homework</h1>	
         <p>Add the JavaScript code needed to enable auto-complete on this form.  Whenever the checkbox is checked, the code should automatically copy the values from Shipping Name and Shipping Zip into the Billing Name and Billing Zip.  If the checkbox is unchecked, the Billing Name and Billing Zip should go blank.</p>
 
 		<form>		
         <fieldset>
-	  <legend>Shipping Information</legend>			  <label for ="shippingName">Name:</label>		  <input type = "text" name = "Name" id = "shippingName" required><br/>
+	  <legend>Shipping Information</legend>	
+		<label for ="shippingName">Name:</label>
+		<input type = "text" name = "Name" id = "shippingName" required><br/>
 
-	  <label for = "shippingzip">Zip code:</label>		  <input type = "text" name = "zip" id = "shippingZip" pattern = "[0-9]{5}" required><br/>
+	  <label for = "shippingzip">Zip code:</label>
+		<input type = "text" name = "zip" id = "shippingZip" pattern = "[0-9]{5}" required><br/>
         </fieldset>
 	<input type="checkbox" id="same" name="same" onchange= "billingFunction()"/>		
         <label for = "same">Is the Billing Information the Same?</label>						
-        <fieldset>
- 	  <legend>Billing Information</legend>			  <label for ="billingName">Name:</label>		  <input type = "text" name = "Name" id = "billingName" required><br/>
+        
+			<fieldset>
+ 	  <legend>Billing Information</legend>
+		<label for ="billingName">Name:</label>
+		<input type = "text" name = "Name" id = "billingName" required><br/>
 	   
-          <label for = "billingzip">Zip code:</label>		  <input type = "text" name = "zip" id = "billingZip" pattern = "[0-9]{5}" required><br/>
+          <label for = "billingzip">Zip code:</label>
+		<input type = "text" name = "zip" id = "billingZip" pattern = "[0-9]{5}" required><br/>
 	</fieldset>
 
 	<input type = "submit" value = "Verify"/>	
     </form>
-</script>
   </body>
 </html>
